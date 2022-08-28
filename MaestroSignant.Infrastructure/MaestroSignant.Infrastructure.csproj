@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Persistence\Migrations\001 - InitDB.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Persistence\Migrations\001 - InitDB.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.0.123" />
+		<PackageReference Include="dbup-sqlserver" Version="4.6.0" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.0" />
+		<PackageReference Include="System.ServiceModel.Duplex" Version="4.8.*" />
+		<PackageReference Include="System.ServiceModel.Http" Version="4.8.*" />
+		<PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.*" />
+		<PackageReference Include="System.ServiceModel.Security" Version="4.8.*" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\MaestroSignant.Application\MaestroSignant.Application.csproj" />
+		<ProjectReference Include="..\MaestroSignant.Domain\MaestroSignant.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Extensions\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Queries.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Queries.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Queries.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Queries.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+</Project>

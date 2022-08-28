@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaestroSignant.Api", "MaestroSignantApp\MaestroSignant.Api.csproj", "{B7BAC7A2-D185-4AC6-8639-160108B9CD45}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "MaestroSignantUI", "MaestroSignantUI\MaestroSignantUI.esproj", "{FF977831-80C7-44ED-BA38-79ACBA1CB293}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaestroSignant.Domain", "MaestroSignant.Domain\MaestroSignant.Domain.csproj", "{9AE1330F-AA6B-4BF6-B0F4-14EDB43B68AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaestroSignant.Infrastructure", "MaestroSignant.Infrastructure\MaestroSignant.Infrastructure.csproj", "{3B40F9B3-98A4-40DC-8A72-7278DDC62DA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaestroSignant.Application", "MaestroSignant.Application\MaestroSignant.Application.csproj", "{994DF85C-8BAA-4FE5-85E6-02A30B3DD50C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7BAC7A2-D185-4AC6-8639-160108B9CD45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BAC7A2-D185-4AC6-8639-160108B9CD45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BAC7A2-D185-4AC6-8639-160108B9CD45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BAC7A2-D185-4AC6-8639-160108B9CD45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF977831-80C7-44ED-BA38-79ACBA1CB293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF977831-80C7-44ED-BA38-79ACBA1CB293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF977831-80C7-44ED-BA38-79ACBA1CB293}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FF977831-80C7-44ED-BA38-79ACBA1CB293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF977831-80C7-44ED-BA38-79ACBA1CB293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF977831-80C7-44ED-BA38-79ACBA1CB293}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9AE1330F-AA6B-4BF6-B0F4-14EDB43B68AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE1330F-AA6B-4BF6-B0F4-14EDB43B68AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE1330F-AA6B-4BF6-B0F4-14EDB43B68AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE1330F-AA6B-4BF6-B0F4-14EDB43B68AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B40F9B3-98A4-40DC-8A72-7278DDC62DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B40F9B3-98A4-40DC-8A72-7278DDC62DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B40F9B3-98A4-40DC-8A72-7278DDC62DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B40F9B3-98A4-40DC-8A72-7278DDC62DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{994DF85C-8BAA-4FE5-85E6-02A30B3DD50C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{994DF85C-8BAA-4FE5-85E6-02A30B3DD50C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{994DF85C-8BAA-4FE5-85E6-02A30B3DD50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{994DF85C-8BAA-4FE5-85E6-02A30B3DD50C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C7BEF8C-D711-4DD2-8129-9736A870F36C}
+	EndGlobalSection
+EndGlobal

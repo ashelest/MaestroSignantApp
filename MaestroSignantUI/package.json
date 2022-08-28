@@ -1,0 +1,71 @@
+{
+  "name": "MaestroSignantUI",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "node aspnetcore-https.js && vue-cli-service serve --host localhost",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@aacassandra/vue3-progressbar": "^1.0.3",
+    "@dreamonkey/vue-signalr": "^1.0.1",
+    "@kyvg/vue3-notification": "^2.4.1",
+    "@microsoft/signalr": "^6.0.8",
+    "@popperjs/core": "^2.11.6",
+    "axios": "^0.27.2",
+    "bootstrap": "^5.2.0",
+    "bootstrap-vue-3": "^0.2.11",
+    "core-js": "^3.6.5",
+    "primeicons": "^5.0.0",
+    "primevue": "^3.16.2",
+    "vue": "^3.2.37",
+    "vue-axios": "^3.4.1",
+    "vue-class-component": "^8.0.0-0",
+    "vue-property-decorator": "^9.1.2",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0",
+    "vuex-module-decorators": "^1.0.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "~4.5.14",
+    "@vue/cli-plugin-eslint": "~4.5.14",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.14",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "typescript": "^4.4.4",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/typescript"
+    ],
+    "parserOptions": {
+      "parser": "@typescript-eslint/parser"
+    },
+    "rules": {
+      "no-unused-vars": "off",
+      "no-debugger": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

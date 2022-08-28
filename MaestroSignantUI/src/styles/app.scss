@@ -1,0 +1,54 @@
+@import './scroll';
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue-3/dist/bootstrap-vue-3.css';
+
+@import '~primevue/resources/themes/saga-blue/theme.css'; //theme
+@import '~primevue/resources/primevue.min.css'; //core css
+@import '~primeicons/primeicons.css'; //icons
+
+#app {
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: white;
+  font-size: 13px;
+  color: #333;
+  min-width: 767px;
+}
+
+.body-container {
+  padding: 15px;
+}
+
+.outline-none {
+  outline: none;
+}
+
+.no-transition {
+  transition: none !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.debug-box {
+  color: black !important;
+  border: 1px solid red;
+  box-shadow: 1px 1px 5px green;
+  text-overflow: ellipsis;
+  max-width: 900px;
+}
+
+.vue-notification {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 500px;
+  font-size: 18px !important;
+}
