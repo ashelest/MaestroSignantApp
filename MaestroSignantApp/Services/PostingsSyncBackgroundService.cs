@@ -28,13 +28,13 @@ public class PostingsSyncBackgroundService : BackgroundService
 
             foreach (var job in await syncService.GetActiveSyncJobs())
             {
-                var postingStatus = await postingsService.GetPostingStatusAsync(job.PostingId, job.AttachmentId);
+                var result = await postingsService.GetPostingStatusAsync(job.PostingId, job.AttachmentId);
 
-                if (postingStatus.Success)
+                if (PostingWasProcessed(result))
                 {
                     string eventName = null;
 
-                    switch (postingStatus.Status)
+                    switch (result.Status)
                     {
                         case PostingStatus.Completed:
                             eventName = SignantHubEvents.PostingSigned;
@@ -53,5 +53,11 @@ public class PostingsSyncBackgroundService : BackgroundService
 
             await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
         }
+    }
+
+    private bool PostingWasProcessed(PostingStatusResult result)
+    {
+        return result.Success && (result.Status == PostingStatus.Completed ||
+                                  result.Status == PostingStatus.CompletedPartially);
     }
 }

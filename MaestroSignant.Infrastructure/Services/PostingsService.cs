@@ -57,7 +57,7 @@ public class PostingsService : IPostingsService
             Message = statusResult.Message
         };
 
-        if (!statusResult.Success) { return syncStatusResult; }
+        if (!statusResult.Success || statusResult.Status == PostingStatus.Sent) { return syncStatusResult; }
 
         if (statusResult.Status == PostingStatus.CompletedPartially)
         {

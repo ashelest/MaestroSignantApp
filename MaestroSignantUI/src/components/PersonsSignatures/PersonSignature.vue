@@ -40,7 +40,7 @@
     </div>
 
     <div class="p-signature-push" v-if="posting.showPush">
-      <div class="push-circle" v-tooltip="{ value: getPostingTooltipText }">
+      <div class="push-circle" v-tooltip.left="{ value: getPostingTooltipText }">
         <div>1</div>
       </div>
     </div>
@@ -111,9 +111,11 @@
 
   .p-signature {
     display: grid;
-    grid-template-columns: 25% 55% 15%;
+    grid-column-end: auto;
+    grid-template-columns: 1fr 1fr auto;
+    column-gap: 100px;
+
     align-items: center;
-    column-gap: 20px;
     box-shadow: 2px 3px 2px rgb(0 0 0 / 12%);
     border: 0.1em solid #e6e6e6;
     padding: 15px 15px;

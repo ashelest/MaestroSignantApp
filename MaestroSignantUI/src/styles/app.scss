@@ -46,9 +46,7 @@ body {
 }
 
 .vue-notification {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 500px;
+  margin: 0 5px 5px;
+  padding: 10px;
   font-size: 18px !important;
 }

@@ -41,9 +41,14 @@ export class PersonSignatureModule extends VuexModule {
   async getPostingStatus(command) {
     const { postingId, attachmentId } = command;
 
-    const postingStatus = await this.client.getPostingStatus(postingId, attachmentId);
+    const postingStatusResult = await this.client.getPostingStatus(postingId, attachmentId);
 
-    this.processPostingStatusSync(postingStatus, postingId);
+    const mutationData = {
+      postingStatusResult,
+      postingId,
+    };
+
+    this.processPostingStatusSync(mutationData);
   }
 
   @Action
@@ -69,14 +74,16 @@ export class PersonSignatureModule extends VuexModule {
   }
 
   @Mutation
-  processPostingStatusSync(result: PostingStatusResult, postingId) {
-    if (result.status === PostingStatus.Completed) {
+  processPostingStatusSync(mutationData) {
+    const { postingStatusResult, postingId } = mutationData;
+
+    if (postingStatusResult.status === PostingStatus.Completed) {
       const posting = this.personPostings.find((p) => p.postingId === postingId);
       posting.attachmentStatus = AttachmentStatus.Signed;
 
-      NotificationService.NotifySuccess(result.message);
+      NotificationService.NotifySuccess(postingStatusResult.status);
     } else {
-      NotificationService.NotifyWarn(result.status);
+      NotificationService.NotifyWarn(postingStatusResult.status);
     }
   }
 
